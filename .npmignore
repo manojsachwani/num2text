@@ -1,0 +1,20 @@
+tsd.json
+.gitignore
+.gitattributes
+node_modules/
+typings/
+.travis.yml
+dist/
+Gruntfile.js
+.vscode/
+coverage/
+.prettierrc
+
+# AI / agent files
+AGENTS.md
+CLAUDE.md
+GEMINI.md
+*.prompt.md
+.ai/
+.cursor/
+.copilot/
