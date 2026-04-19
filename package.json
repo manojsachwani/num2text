@@ -1,6 +1,6 @@
 {
-  "name": "num2txt",
-  "version": "1.0.1",
+  "name": "number2text",
+  "version": "1.0.0",
   "description": "Convert numbers to text in multiple languages with a TypeScript-first API.",
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
