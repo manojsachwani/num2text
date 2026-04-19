@@ -16,7 +16,7 @@ https://github.com/Maheshkumar-Kakade/number-to-text
 ## Installation
 
 ```bash
-npm install num2txt
+npm install @indefiniteloop/num2txt
 ```
 
 ## Quick Start
@@ -24,21 +24,21 @@ npm install num2txt
 ### ESM
 
 ```ts
-import { convert } from 'num2txt'
+import { convert } from "num2txt";
 
-convert(123456)
+convert(123456);
 // One Hundred And Twenty Three Thousand, Four Hundred And Fifty Six
 
-convert('-12.50')
+convert("-12.50");
 // Minus Twelve, Point Fifty
 ```
 
 ### CommonJS
 
 ```js
-const { convert } = require('num2txt')
+const { convert } = require("num2txt");
 
-convert(1000000, { language: 'en-in' })
+convert(1000000, { language: "en-in" });
 // Ten Lakh
 ```
 
@@ -54,7 +54,7 @@ convert(1000000, { language: 'en-in' })
 Example:
 
 ```ts
-convert('3.14', { language: 'fr', case: 'upperCase' })
+convert("3.14", { language: "fr", case: "upperCase" });
 // TROIS VIRGULE QUATORZE
 ```
 
@@ -77,27 +77,27 @@ Provide a `LanguageConverter` object with:
 - `convertInteger(value, context): string`
 
 ```ts
-import { registerLanguage, convert, type LanguageConverter } from 'num2txt'
+import { registerLanguage, convert, type LanguageConverter } from "num2txt";
 
 const pirate: LanguageConverter = {
-  code: 'pirate',
-  defaultSeparator: '',
-  decimalWord: 'point',
-  negativeWord: 'minus',
-  convertInteger: value => (value === '0' ? 'zero' : `num-${value}`)
-}
+  code: "pirate",
+  defaultSeparator: "",
+  decimalWord: "point",
+  negativeWord: "minus",
+  convertInteger: (value) => (value === "0" ? "zero" : `num-${value}`),
+};
 
-registerLanguage('pirate', pirate)
-convert(42, { language: 'pirate' })
+registerLanguage("pirate", pirate);
+convert(42, { language: "pirate" });
 // num-42
 ```
 
 You can inspect available codes at runtime:
 
 ```ts
-import { getSupportedLanguages } from 'num2txt'
+import { getSupportedLanguages } from "num2txt";
 
-getSupportedLanguages()
+getSupportedLanguages();
 // ['de', 'en-in', 'en-us', 'fr', 'id', 'tr', ...]
 ```
 
